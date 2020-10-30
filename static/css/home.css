@@ -1,0 +1,79 @@
+main {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-holder {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    opacity: 0;
+    transition: all ease-in-out 1s;
+}
+
+.title-holder h1 {
+    margin-right: 10px;
+    font-size: 72px;
+}
+
+.title-holder span {
+    font-size: 72px;
+}
+
+.title-holder img {
+    width: 80px;
+    height: 80px;
+    animation-name: bounce-6;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -100%;
+    transition: left ease-in-out 1s;
+}
+
+input {
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid white;
+    margin-right: 10px;
+    outline: none;
+}
+
+input::placeholder {
+    color: white;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 20px;
+    background: #94b0e3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+@keyframes bounce-6 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-100px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}

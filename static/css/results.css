@@ -1,0 +1,82 @@
+.wrapper {
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.chat-log-wrapper {
+    height: 75%;
+    width: 75%;
+}
+
+.view {
+
+}
+
+.view ul {
+
+}
+
+.view li:first-child {
+    position: relative;
+}
+
+.view li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #94b0e3;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    text-align: center;
+    transition: padding ease-in-out 0.4s;
+}
+
+.active-view {
+    padding: 10px 80px !important;
+}
+
+.content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 60vh;
+    border-radius: 0 10px 10px 10px;
+}
+
+.content::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: white;
+}
+
+.comment {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.comment img {
+    width: 200px;
+    height: 200px;
+}
+
+.comment:nth-child(odd) {
+    background-color: #7090ca;
+}
+
+.comment:nth-child(even) {
+    background-color: #94b0e3;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/global.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/results.css')}}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@1,700" rel="stylesheet"/>
+    <script>let json_data = "{{data}}";</script>
+    <script defer src="{{url_for('static', filename='js/results.js')}}"></script>
+    <title>JSON Result</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        {% include 'header.html' %}
+
+        <main>
+
+            <div class="chat-log-wrapper">
+
+                <div class="view">
+
+                    <ul>
+                        <li id="chat-view" class="active-view">Chat</li>
+                        <li id="json-view">JSON</li>
+                    </ul>
+
+                </div>
+
+                <div class="content">
+                    {% if valid %}
+                        {% for comment in chat %}
+                        <div class="comment">
+                            {% if comment[2] %}
+                                <p>{{comment[0]}}:</p>
+                                <img src="{{comment[2]}}"/>
+                            {% else %}
+                                <p>{{comment[0]}} : {{comment[1]}}</p>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+    
+</body>
+</html>
